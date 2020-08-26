@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const GifGridItem = ({ id, url, title }) => {
+const GifGridItem = ({ url, title }) => {
   return (
     <div className="card animate__animated animate__fadeIn">
       <img src={url} alt={title} />
@@ -9,4 +10,8 @@ const GifGridItem = ({ id, url, title }) => {
   );
 };
 
+GifGridItem.propTypes = {
+  url: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 export default GifGridItem;
